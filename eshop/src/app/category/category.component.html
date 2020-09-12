@@ -1,0 +1,5 @@
+<div class="container">
+    <div *ngFor="let category of categories | async" (click)="navigateToProducts(category)">
+    <img [src]="category.thumbnail"/>
+</div>
+</div>

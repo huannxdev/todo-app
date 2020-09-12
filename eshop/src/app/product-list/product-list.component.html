@@ -1,0 +1,15 @@
+<nz-breadcrumb>
+    <nz-breadcrumb-item>
+        <a [routerLink]= "['../']" >Home</a>
+      </nz-breadcrumb-item>
+    <nz-breadcrumb-item>
+        <a>{{categoryName}}</a>
+      </nz-breadcrumb-item>
+</nz-breadcrumb>
+<div class="container">
+    <div *ngFor="let product of (listProduct | async)" class="item">
+        <img [src]="product.image" />
+        <p>{{product.name}}</p>
+        <p>{{product.prince | currency}} đ</p>
+    </div>
+</div>
