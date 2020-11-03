@@ -1,4 +1,6 @@
 const mongooes = require('mongoose');
+const baseModel = require('./baseModel');
+
 const categorySchema = new mongooes.Schema({
     name: {
         type: String,
@@ -10,7 +12,9 @@ const categorySchema = new mongooes.Schema({
     thumbnail: {
         type: String,
         required: [true, 'a category must have a thumbnail']
-    }
+    },
+    ...baseModel
+
 });
 
 categorySchema.set('toObject', {

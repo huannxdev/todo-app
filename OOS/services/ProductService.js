@@ -1,5 +1,5 @@
-const productRepository = require('../domain/ProductRepository');
-const product = require('../domain/models/ProductModel');
+const productRepository = require('../domain/productRepository');
+const product = require('../domain/models/productModel');
 
 exports.getAllProduct = async () => {
     const products = await productRepository.getAll();

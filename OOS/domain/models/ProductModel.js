@@ -1,15 +1,12 @@
 const mongooes = require('mongoose');
+const baseModel = require('./baseModel');
 const productSchema = new mongooes.Schema({
     name: {
         type: String,
         required: true
     },
     code: String,
-    updatedDate: Date,
-    createdDate: Date,
-    createdBy: String,
-    modifiedDate: Date,
-    modifiedBy: String,
+    ...baseModel,
     description: String,
     idCategory: String,
     status: Number,
